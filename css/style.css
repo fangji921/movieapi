@@ -1,0 +1,287 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Corbel';
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    color:#fff;
+    background-color:#3d3f5e;
+}
+
+ul,li{
+    list-style:none;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+button{
+    border:none;
+}
+
+select {
+    letter-spacing: 0.8px;
+}
+
+#wrap{
+    width:100%;
+    position: relative;
+}
+
+.search-keyword{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 900;
+    background-color: #333551;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+.search-keyword .keyword-inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.search-keyword select{
+    width: 130px;
+    height: 50px;
+    font-size:18px;
+    line-height: 50px;
+    padding: 10px;
+    color:#fff;
+    background-color: #272942;
+    border: none;
+    box-sizing: border-box;
+    margin-right: -5px;
+}
+
+.search-keyword #search-submit{
+    width: 1070px;
+    height: 50px;
+    font-size:18px;
+    line-height: 50px;
+    color:#fff;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #333551;
+    border:none;
+}
+
+.main{
+    width:100%;
+    margin-top: 50px;
+}
+
+.main .main-inner{
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.main .filter-area{
+    width: 250px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background-color: #2d304b;
+}
+
+.main .filter-area .filter{
+    margin-bottom: 15px;
+}
+
+.main .filter-area h3{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+.main .filter-area .filter-box{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.main .filter-area select{
+    height: 23px;
+    font-size: 15px;
+    background-color: #3d3f5e;
+    color: #fff;
+    border:none;
+}
+
+.main .result-area{
+    width: 950px;
+    position: relative;
+}
+
+.main .movie-result{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+/* 작품카드: 동적생성 node(js 파일 참고) */
+
+.main .movie-card{
+    width: 200px;
+    margin-bottom: 20px;
+    margin-right: calc((100% - 800px) / 3);
+}
+
+.main .movie-card:nth-child(4n){margin-right: 0;}
+
+.main .movie-card .movie-poster{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.main .movie-card .movie-poster-img{
+    width:100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background:url(../img/no-image.jpg) no-repeat center/cover;
+}
+
+.main .movie-card .movie-poster-img .poster-img{
+    height: 100%;
+}
+
+.main .movie-card .movie-rating{
+    width:38px;
+    height: 30px;
+    font-size:16px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+    background-color:gold;
+    color:#333;
+    border-radius: 5px;
+    position:absolute;
+    top:20px;
+    right:-10px;
+    z-index: 100;
+}
+
+.main .movie-card .movie-poster:hover{
+    transform:translateY(-8px);
+}
+
+.main .movie-card .movie-title{
+    font-size:18px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.main .movie-card .movie-date{
+    font-size:15px;
+    line-height: 20px;
+    color:#aaa;
+}
+
+.main .movie-card .movie-overview{
+    font-size:16px;
+    line-height: 21px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.main .person-result{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* 인물카드: 동적생성 node(js 파일 참고) */
+.main .person-card{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.main .person-card .profile-box{
+    width: 230px;
+    height: 350px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.main .profile-box img{
+    height: 100%;
+}
+
+.main .person-info .person-name{
+    font-size:20px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.main .person-info .person-job{
+    font-size:18px;
+    line-height: 23px;
+}
+
+/* 셀럽 필모박스: 동적생성 node(js 파일 참고) */
+.main .filmo-box{
+    display: flex;
+}
+
+.main .filmo-box li{
+    width: 140px;
+    margin-right: 15px;
+}
+
+.main .filmo-box .media-type{
+    font-size:13px;
+    margin-bottom: 5px;
+}
+
+.main .filmo-box .filmo-poster{
+    width: 100%;
+    height: 210px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.main .filmo-poster img{
+    height: 100%;
+}
+
+.main .filmo-title{
+    font-size:18px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.main .filmo-year{
+    font-size:16px;
+    line-height: 21px;
+    text-align: center;
+}

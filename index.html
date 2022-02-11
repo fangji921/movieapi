@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movie</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/movieapi.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="search-keyword">
+            <div class="keyword-inner">
+                <form action="" id="search-form">
+                    <select>
+                        <option>Movie</option>
+                        <option>Celebs</option>
+                    </select>
+                    <input type="search" id="search-submit" placeholder="search">
+                </form>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-inner">
+                <div class="filter-area">
+                    <div class="genre-filter filter">
+                        <h3>Genre</h3>
+                        <ul class="filter-box">
+                            <li>
+                                <input type="checkbox" id="All" value="" checked="checked">
+                                <label for="All">All</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Action" value="Action">
+                                <label for="Action">Action</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Adventure" value="Adventure">
+                                <label for="Adventure">Adventure</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Animation" value="Animation">
+                                <label for="Animation">Animation</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Comedy" value="Comedy">
+                                <label for="Comedy">Comedy</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Crime" value="Crime">
+                                <label for="Crime">Crime</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Documentary" value="Documentary">
+                                <label for="Documentary">Documentary</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Drama" value="Drama">
+                                <label for="Drama">Drama</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Family" value="Family">
+                                <label for="Family">Family</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Fantasy" value="Fantasy">
+                                <label for="Fantasy">Fantasy</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="History" value="History">
+                                <label for="History">History</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Horror" value="Horror">
+                                <label for="Horror">Horror</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Music" value="Music">
+                                <label for="Music">Music</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Mystery" value="Mystery">
+                                <label for="Mystery">Mystery</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Romance" value="Romance">
+                                <label for="Romance">Romance</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Science Fiction" value="Science Fiction">
+                                <label for="Science Fiction">Science Fiction</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="TV Movie" value="TV Movie">
+                                <label for="TV Movie">TV Movie</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Thriller" value="Thriller">
+                                <label for="Thriller">Thriller</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="War" value="War">
+                                <label for="War">War</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Western" value="Western">
+                                <label for="Western">Western</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="year-filter filter">
+                        <h3>Year</h3>
+                        <select>
+                            <option value="">All</option>
+                            <option value="2000">2000s</option>
+                            <option value="1990">1990s</option>
+                            <option value="1980">1980s</option>
+                            <option value="1970">1970s</option>
+                            <option value="1960">1960s</option>
+                            <option value="bf1960">before 1960s</option>
+                        </select>
+                    </div>
+                    <div class="sort-by filter">
+                        <h3>Sort by</h3>
+                        <select>
+                            <option value="Latest">Latest</option>
+                            <option value="Oldest">Oldest</option>
+                            <option value="Rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="result-area">
+                    <ul class="movie-result search-result">
+                    </ul>
+                    <ul class="person-result search-result">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
